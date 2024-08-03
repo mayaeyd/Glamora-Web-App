@@ -1,0 +1,145 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #f4f4f4;
+}
+
+h1 {
+    text-align: center;
+    margin-top: 20px;
+    color: #333;
+}
+
+.cards-container{
+    display: flex;
+    flex-wrap:wrap;
+    gap: 10px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.card-container{
+    align-items:flex-start;
+    flex-direction: column;
+    cursor: pointer;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+    padding: 20px;
+    margin: 10px;
+    height: 300px;
+    width: 300px;
+    color: black;
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    text-decoration: none; 
+    overflow: hidden;
+    transition: transform 0.3s ease-in-out;
+}
+
+.card-container:hover{
+    transform:scale(0.95);
+}
+
+.product-image{
+    height: 230px;
+    width: 290px;
+    background-size: cover;
+    background-position: center; 
+    background-repeat: no-repeat;
+    justify-content: center;
+    border: none;
+}
+
+#product-info{
+    display: flex;
+    flex-direction: row;
+    align-content:space-around;
+}
+
+#product-name-price{
+    display: flex;
+    flex-direction: column;
+}
+
+.productType{
+    color: white;
+    font-size: 2rem;
+}
+
+.products-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+    padding: 20px;
+}
+
+.product-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2);
+    padding: 20px;
+    width: 300px;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-container:hover {
+    transform: scale(1.05);
+    box-shadow: 0 6px 12px rgba(0,0,0,0.3);
+}
+
+.product-image {
+    height: 200px;
+    width: 100%;
+    background-size: cover;
+    background-position: center;
+    border-radius: 8px;
+    margin-bottom: 15px;
+}
+
+.product-info {
+    text-align: center;
+}
+
+.product-name-price {
+    margin-bottom: 15px;
+}
+
+.product-name {
+    font-size: 1.2rem;
+    font-weight: bold;
+    margin: 0;
+    color: #333;
+}
+
+.product-price {
+    font-size: 1rem;
+    color: #777;
+    margin: 0;
+}
+
+.view-product-button {
+    display: inline-block;
+    padding: 10px 20px;
+    color: white;
+    background-color: #db33f1;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    font-size: 1rem;
+    transition: background-color 0.3s ease;
+}
+
+.view-product-button:hover {
+    background-color: #ec52cd;
+}
+
+

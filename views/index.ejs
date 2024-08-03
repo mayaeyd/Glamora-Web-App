@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title>Glamora</title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Product Type</h1>
+        <form method="get" class="cards-container">
+            <button style="background-image: url('/images/productType/blush.jpeg');" class="card-container productType" type="submit" value="blush" name="type" formaction="/secret">Blush</button>
+            <button style="background-image: url('/images/productType/bronzer.jpeg');" class="card-container productType" type="submit" value="bronzer" name="type" formaction="/secret">Bronzer</button>
+            <button style="background-image: url('/images/productType/eyebrow.jpeg');" class="card-container productType" type="submit" value="eyebrow" name="type" formaction="/secret">Eyebrow</button>
+            <button style="background-image: url('/images/productType/eyeliner.jpeg');" class="card-container productType" type="submit" value="eyeliner" name="type" formaction="/secret">Eyeliner</button>
+            <button style="background-image: url('/images/productType/eyeshadow.jpeg');" class="card-container productType" type="submit" value="eyeshadow" name="type" formaction="/secret">Eyeshadow</button>
+            <button style="background-image: url('/images/productType/foundation.jpeg');" class="card-container productType" type="submit" value="foundation" name="type" formaction="/secret">Foundation</button>
+            <button style="background-image: url('/images/productType/lipliner.jpeg');" class="card-container productType" type="submit" value="lip_liner" name="type" formaction="/secret">Lipliner</button>
+            <button style="background-image: url('/images/productType/lipstick.jpeg');" class="card-container productType" type="submit" value="lipstick" name="type" formaction="/secret">Lipstick</button>
+            <button style="background-image: url('/images/productType/mascara.jpeg');" class="card-container productType" type="submit" value="mascara" name="type" formaction="/secret">Mascara</button>
+            <button style="background-image: url('/images/productType/nailpolish.jpeg');" class="card-container productType" type="submit" value="nail_polish" name="type" formaction="/secret">Nail Polish</button>
+
+        </form>
+        <span>
+            <% if(locals.content){ %>
+                <%= content %>
+                <% } %>
+        </span>
+
+        <script src="" async defer></script>
+    </body>
+</html>

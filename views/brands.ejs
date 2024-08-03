@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8">
+        <meta http-equiv="X-UA-Compatible" content="IE=edge">
+        <title></title>
+        <meta name="description" content="">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link rel="stylesheet" href="styles.css">
+    </head>
+    <body>
+        <h1>Brands</h1>
+        <form method="get" class="cards-container">
+            <input type="hidden" value="<%= productType %>" name="type">
+            <% brands.forEach(brand => { 
+                const encodedBrand = brand.replace(/['’`]/g, ''); %>
+                <button class="card-container" type="submit" value="<%= brand %>" style="background-image: url('/images/brands/<%= encodedBrand %>.jpg');" name="brand" formaction="/products?type=<%= productType %>&brand=<%= brand %>"></button>
+            <% });%>
+        </form>
+       
+
+        <script src="" async defer></script>
+    </body>
+</html>
