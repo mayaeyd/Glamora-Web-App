@@ -2,13 +2,100 @@ body {
     font-family: Arial, sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f4f4;
+    background-color: #f5e6e8;
 }
 
 h1 {
     text-align: center;
     margin-top: 20px;
     color: #333;
+    font-size: 3rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+}
+
+#logo{
+    margin-top: 20px;
+    padding-top: 50px;
+    font-size: 4.3rem;
+    color: black;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
+    width: 330px;
+    border: none;
+    padding: 10px 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.logo-container{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+#button-container{
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+    padding: 150px;
+}
+
+#slogan{
+    display: flex;
+    justify-content: center;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 1.6rem;
+}
+
+.black-button {
+    background-color: black;
+    color: white;
+    width: 150px;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    text-decoration: none;
+    transition: background-color 0.3s, transform 0.3s;
+}
+
+.black-button:hover {
+    background-color: #333;
+    transform: scale(1.05);
+}
+
+.black-button:active {
+    background-color: #111;
+    transform: scale(0.95);
+}
+
+.slideshow-container {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment:fixed;
+    position: relative;
+    animation: fade 8s ease-in-out infinite alternate;
+}
+
+@keyframes fade {
+    from {
+        opacity: 0.8;
+    }
+    to {
+        opacity: 1;
+    }
 }
 
 .cards-container{
@@ -68,6 +155,10 @@ h1 {
 .productType{
     color: white;
     font-size: 2rem;
+    font-family: "Lora", serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .products-container {
@@ -97,7 +188,7 @@ h1 {
 }
 
 .product-image {
-    height: 200px;
+    height: 270px;
     width: 100%;
     background-size: cover;
     background-position: center;
@@ -126,20 +217,5 @@ h1 {
     margin: 0;
 }
 
-.view-product-button {
-    display: inline-block;
-    padding: 10px 20px;
-    color: white;
-    background-color: #db33f1;
-    border: none;
-    border-radius: 5px;
-    text-decoration: none;
-    font-size: 1rem;
-    transition: background-color 0.3s ease;
-}
-
-.view-product-button:hover {
-    background-color: #ec52cd;
-}
 
 

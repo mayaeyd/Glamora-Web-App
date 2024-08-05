@@ -1,15 +1,15 @@
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Glamora</title>
-        <meta name="description" content="">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
-        <link rel="stylesheet" href="styles.css">
-    </head>
+<%- include("partials/header.ejs") %>
     <body>
-        <h1>Product Type</h1>
+        <div class="slideshow-container" id="slideshow">
+            <div class="logo-container">
+                <h1 id="logo">GLAMORA</h1>
+            </div>
+            <div id="button-container">
+                <p id="slogan">Throw em' in your bag</p><br>
+                <button id="scroll-button" class="black-button">SHOP NOW →</button>
+            </div>
+        </div>
+        <h1>Choose a product type</h1>
         <form method="get" class="cards-container">
             <button style="background-image: url('/images/productType/blush.jpeg');" class="card-container productType" type="submit" value="blush" name="type" formaction="/secret">Blush</button>
             <button style="background-image: url('/images/productType/bronzer.jpeg');" class="card-container productType" type="submit" value="bronzer" name="type" formaction="/secret">Bronzer</button>
@@ -29,6 +29,33 @@
                 <% } %>
         </span>
 
-        <script src="" async defer></script>
+        <script>
+            const slideshowContainer = document.getElementById('slideshow');
+
+            const images = [
+                'url(/images/slideshow/img2.jpeg)',
+                'url(/images/slideshow/img3.jpeg)',
+                'url(/images/slideshow/img4.jpeg)',
+                'url(/images/slideshow/img5.jpeg)',
+            ];
+
+            let currentIndex = 0;
+
+            function changeBackground() {
+                slideshowContainer.style.backgroundImage = images[currentIndex];
+                currentIndex = (currentIndex + 1) % images.length;
+            }
+
+            setInterval(changeBackground, 8000);
+            changeBackground();
+
+            document.getElementById('scroll-button').addEventListener('click', () => {
+            window.scrollTo({
+                top: window.innerHeight,
+                behavior: 'smooth'
+            });
+        });
+
+        </script>
     </body>
 </html>
