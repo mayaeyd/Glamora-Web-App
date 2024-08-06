@@ -4,14 +4,17 @@
         <div class="products-container" onclick="">
             <% products.forEach(product=>{ %>
                 <div class="product-container">
-                    <button onclick="" class="product-image" style="background-image: url('<%= product.api_featured_image %>');"></button> 
+                    <button class="product-image" style="background-image: url('<%= product.api_featured_image %>');"></button> 
                     <div class="product-info">
                         <div class="product-name-price">
                             <p class="product-name"><%= product.name %></p>
                             <p class="product-price">$<%= product.price %></p>
-                        </div>
-                        <a href="<%= product.product_link %>" class="black-button">View Product →</a> 
-                    </div>      
+                        </div>                       
+                    </div> 
+                    <form>
+                        <input type="hidden" name="product" value='<%= JSON.stringify(product) %>'>
+                        <button type="submit" class="black-button" formaction="/productInfo">View Product →</button>
+                    </form>     
                 </div>
             <% }); %>
         </div>

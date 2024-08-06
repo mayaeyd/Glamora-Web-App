@@ -3,6 +3,7 @@ body {
     margin: 0;
     padding: 0;
     background-color: #f5e6e8;
+    background-image: url("https://www.transparenttextures.com/patterns/asfalt-dark.png");
 }
 
 h1 {
@@ -54,13 +55,14 @@ h1 {
     font-optical-sizing: auto;
     font-weight: 400;
     font-style: normal;
-    font-size: 1.6rem;
+    font-size: 1.8rem;
+    margin-bottom: 0px;
 }
 
 .black-button {
     background-color: black;
     color: white;
-    width: 150px;
+    width: 170px;
     border: none;
     padding: 10px 20px;
     font-size: 16px;
@@ -205,10 +207,14 @@ h1 {
 }
 
 .product-name {
-    font-size: 1.2rem;
+    font-size: 1.4rem;
     font-weight: bold;
     margin: 0;
     color: #333;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 500;
+    font-style: normal;
 }
 
 .product-price {
@@ -217,5 +223,108 @@ h1 {
     margin: 0;
 }
 
+.logo2-container{
+    display:flex;
+    justify-content: center;
+}
+
+.product-info-container{
+    background-color: white;
+    margin: 20px;
+    display:flex;
+    flex-flow: row wrap;
+    justify-content: space-around;
+    padding: 10px;
+    height: 100%;
+    box-shadow: 8px 0px 8px rgba(0, 0, 0, 0.45);
+}
+
+.product-info-details{
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    gap: 15px; 
+    width: 40vw;
+    padding: 20px;
+}
+
+.product-info-name-brand{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+}
+
+.product-brand{
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 200;
+    font-style: normal;
+    margin: 4px;
+}
+
+.product-info-image{
+    width: 300px; 
+    height: 300px; 
+    border: none; 
+    background-size: cover; 
+    background-position: center; 
+    background-repeat: no-repeat;
+}
+
+.product-info-image-container{
+    display: flex;
+    height: 100%;
+    border-color: black;
+    flex-direction: column;
+    align-self: center;
+    overflow: hidden;
+}
+
+.product-description-container{
+    display: flex;
+    flex-direction: column;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 300;
+    font-style: normal;
+}
+
+.product-tag-list{
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
+}
+
+.product-color{
+    height: 17px;
+    width: 17px;
+    border-radius: 50%;
+    
+}
+
+.product-colors-container{
+    display: flex;
+    flex-flow: row wrap;
+    gap: 10px;
+}
+
+.product-price2{
+    font-size: 1.7rem;
+    font-family: "Josefin Sans", sans-serif;
+    font-optical-sizing: auto;
+    font-weight: 350;
+    font-style: normal;
+}
+
+.price-btn-container{
+    display: flex;
+    justify-content: space-between;
+}
+
+.price-btn-container a{
+    align-self:center ;
+    height: 25px;
+}
 
 

@@ -1,0 +1,39 @@
+<%- include("partials/header.ejs") %>
+    <body>
+        <div class="logo2-container">
+            <h1>GLAMORA</h1>
+        </div>
+        <div class="product-info-container">
+            <div class="product-info-image-container">
+                <button style="background-image: url('<%= productInfo.api_featured_image %>');" class="product-info-image"></button>
+            </div>
+            <div class="product-info-details">
+                <div class="product-info-name-brand">
+                    <p class="product-name"><%= productInfo.name %></p>
+                    <p class="product-brand">by <%= productInfo.brand %></p>
+                </div>
+                <div class="product-description-container">
+                    <%= productInfo.description %>
+                </div>
+                <div class="product-tag-list">
+                    <% productInfo.tag_list.forEach(element => { %>
+                        <%= element %>. 
+                    <% }); %>
+                </div>
+                <div class="product-colors-container">
+                    <% productInfo.product_colors.forEach(color =>{ %>
+                        <div class="product-color" style="background-color:<%= color.hex_value %>;"></div>
+                    <% }); %>
+                </div>
+                <div class="price-btn-container">
+                    <p class="product-price2">$<%= productInfo.price %></p>
+                    <a class="black-button" href="<%= productInfo.product_link %>">View On Website →</a>
+                </div>
+            </div>
+        </div>
+        <script>
+            
+        </script>
+    </body>
+</html>
+

@@ -9,6 +9,10 @@ const API_URL="http://makeup-api.herokuapp.com";
 app.use(express.static("public"));
 app.use(bodyParser.urlencoded({ extended: true }));
 
+function capitalizeWord(str) {
+    return str.split(' ').map(word => word.charAt(0).toUpperCase() + word.slice(1)).join(' ');
+}
+
 app.get("/",async (req,res)=>{
         res.render("index.ejs");
 });
@@ -43,8 +47,8 @@ app.get("/products",async (req,res)=>{
         const productType=req.query.type;
         const brand= req.query.brand;
 
-        console.log(`product type: ${productType}`);
-        console.log(`brand: ${brand}`);
+        // console.log(`product type: ${productType}`);
+        // console.log(`brand: ${brand}`);
 
         const result= await axios.get(`http://makeup-api.herokuapp.com/api/v1/products.json?brand=${brand}&product_type=${productType}`);
         const response =result.data;
@@ -53,6 +57,12 @@ app.get("/products",async (req,res)=>{
     catch(error){
         console.log(error.response.data);
     }
+});
+
+app.get("/productInfo", async (req,res)=>{
+    const product = JSON.parse(req.query.product);
+    product.brand= capitalizeWord(product.brand);
+    res.render("productInfo.ejs",{productInfo:product});
 });
 
 app.listen(port,()=>{
